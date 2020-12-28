@@ -10,10 +10,10 @@ def get_word():
 def status(usr, wrd, ch, g_lets, g_words, n_val):
     os.system("clear")
     
-    print("\n ------------- USER ------------ \n")
+    print("\n ___________ USER ____________ \n")
     print(f"hello {usr} !!")
 
-    print("\n ---------- LETS PLAY ---------- \n")
+    print("\n _________ LETS PLAY __________ \n")
     print(wrd)
     print(images[7 - ch])
 
@@ -28,8 +28,8 @@ def result(st, w):
         print(f"\nThe word is {w}.")
         print("\n! Great you win the game !\n")
     else:
-        print("\n! Game over !\n")
-        print(f"\nThe word was {w}.")
+        print("\n! Game over !")
+        print(f"\nThe word was {w}.\n")
 
 
 def play(selected_word,user):
@@ -42,13 +42,13 @@ def play(selected_word,user):
     
     # PLAY CONTINUES WHEN THE GUESS IS TRUE OR CHANCE IS FINISHED
     while not state and chance > 0:
-
+        
         status(user, word, chance, guessed_letters, guessed_words, not_valid)
         guess = input("\nguess a letter or word : ").upper()
 
         # FOR GUESS A LETTER 
         if len(guess) == 1 and guess.isalpha():
-        
+
             if guess not in selected_word:
                 guessed_letters.append(guess)
                 chance -= 1
@@ -83,11 +83,10 @@ def play(selected_word,user):
             not_valid.append(guess)
 
     status(user, word, chance, guessed_letters, guessed_words, not_valid)
-    result(state, word)
+    result(state, selected_word)
 
 def main():
- 
-    print("\n ---------- USER INFO ---------- \n")
+    print("\n ___________ USER INFO ___________ \n")
     user = input("please enter your name : ") 
     word = get_word()
     play(word, user)
