@@ -1,7 +1,6 @@
 # GLOBAL AI HUB COURSE DETAILS
 ![](img/logo.png)
 
-**Course Date:**
 **Name:** Çağrı  
 **Surname:** Esen  
 **Email:** esencgr@gmail.com 
