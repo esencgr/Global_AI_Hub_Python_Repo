@@ -1,5 +1,5 @@
 # GLOBAL AI HUB COURSE DETAILS
-![](img/logo.png)
+![](logo.png)
 
 **Name:** Çağrı  
 **Surname:** Esen  
